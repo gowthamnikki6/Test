@@ -1,0 +1,340 @@
+/* body{
+    background-image: url("web.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+/* div{
+    height: 200px;
+    width: 300px;
+} */
+/* p {
+  font-size: 50px;
+  color: rgb(22, 2, 2);
+  font: bold;
+} */
+/* div{
+    margin: 10px;
+ } */
+/* .box1{
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+ }
+ .box2{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+
+ }
+ .box3{
+    background-color: aqua;
+    width: 200px;0
+    height: 200px;
+    margin-top: 10px;
+ }
+     */
+/* img{
+    border: 2px solid green;
+    border-radius: 50%;
+} */
+/* p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: 700;
+ } */
+/* h1 {
+  color: blue;
+  display: inline;
+} */
+/* p {
+  display: block;
+}
+span img{
+    width: 200px;
+    display: inline;
+    
+    border-radius: 50%;
+    border: 2px solid blue;
+}
+button{
+    padding: 15px;
+    background: linear-gradient();
+    border: none;
+    border-radius: 2px;
+    color: rgb(46, 2, 108);
+} */
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+form{
+    margin: 100px auto;
+    padding: 30px;
+    width: 400px;
+    background-color: rgb(18, 175, 237);
+    border-radius: 20px;
+}
+form label{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: blanchedalmond;
+}
+form input{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+form button{
+    margin-top: 10px;
+    width: 75px;
+    height: 25px;
+    color: aliceblue;
+    background-color: rgb(234, 138, 138);
+} */
+/* div{
+    background-color: rgb(65, 3, 3);
+    width: 200px;
+    height: 200px;
+    transform: rotate(45deg);
+    transform: skew(20deg,10deg);
+    transform: rotate(30deg) translate(50px, 20px) scale(1.2);
+    margin: 50px;
+ } */
+/* .nav{
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+    
+ }
+ .nav a{
+    display: block;
+    color: white;
+    background-color: #555;
+    text-decoration: none;
+    padding: 15px 25px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s ease;
+ }
+ .nav a:hover{
+    background-color: #777;
+ } */
+
+/* *{
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+ }
+
+ body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+ }
+ .container{
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
+ .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+
+ }
+ .card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  .card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .card h3{
+    font-size: 18px;
+    padding-top: 10px;
+  }
+  .card p{
+    font-size: 14px;
+    color: gray;
+  } */
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+   }
+   .boxes{
+    width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    gap: 10px;
+
+   }
+   .box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8,.box9{
+    height: 200px;
+    width: 200px;
+   }
+   .box1,.box3,.box5,.box7,.box9{
+    background-color: blue;
+   }
+   .box2,.box4,.box6,.box8{
+    background-color: red;
+   } */
+/* *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        display: grid;
+    }
+    .box{
+        padding: 20px;
+    } */
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  height: 100vh;
+  gap: 5px;
+  grid-template-areas: "box1 box2 box3"
+                       "box4 box2 box5";
+}
+.box{
+  padding: 20px;
+} */
+/* .box:nth-child(even){
+  background-color: lightblue;
+}
+.box:nth-child(odd){
+  background-color: lightcoral;
+} */
+/* .box1{
+  grid-area: box1;
+  background-color: lightblue;
+}
+.box2{
+  grid-area: box2;
+  background-color: lightgreen;
+}
+.box3{
+  grid-area: box3;
+  background-color: lightgrey;   
+}
+.box4{
+  grid-area: box4;
+  background-color: lightcoral;
+}
+.box5{
+  grid-area: box5;
+  background-color: lightpink;
+} */
+/* .fixed {
+  position:relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+} */
+/* .parent{
+  position: absolute;
+}
+.box1, .box2, .box3{
+  height: 200px;
+  width: 200px;
+}
+.box1{
+  background-color: red;
+}
+.box2{
+  background-color: blue;
+  position: absolute;
+  left: 300px;
+}
+.box3{
+  background-color: green;
+} */
+
+/* .box1, .box3, .box4, .box5{
+  height: 100vh;
+  width: 100%;
+}
+.box1{
+  background-color: red;
+}
+.box2{
+  background-color: black;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  position: sticky;
+}
+.box3{
+  background-color: blue;
+}
+.box4{
+  background-color: green;
+}
+.box5{
+  background-color: yellow;
+} */
+ /* p{
+  color: brown;
+ } */
+/* p:first-line {
+  color: rgb(4, 13, 116);
+} */
+/* h1:hover{
+font-style: italic;
+color: blueviolet;
+} */
+ .box{
+  height: 200px;
+  width: 200px;
+  background-color: pink;
+  transition: all 1s ease-outa                                 ;
+ }
+
+ .box:hover{
+  background-color: yellow;
+  /* width: 400px; */
+  transform: rotate(45deg);
+  margin-top: 50px;
+  margin-left: 50px;
+ }
