@@ -1073,16 +1073,20 @@
 // }
 // console.log(calculateReverse(12456))
 
-const calculateFactorial = (number) => {
-    if(number === 0 || number === 1){
-        return 1;
-    }
-    let result = 1;
-    for( let i = 1; i <= number; i++){
-        result = result * i;
-        console.log(result,i)
-    }
-    return result;
-}
-console.log(calculateFactorial(5))
+// const calculateFactorial = (number) => {
+//     if(number === 0 || number === 1){
+//         return 1;
+//     }
+//     let result = 1;
+//     for( let i = 1; i <= number; i++){
+//         result = result * i;
+//         console.log(result,i)
+//     }
+//     return result;
+// }
+// console.log(calculateFactorial(5))
 
+let sum = (num1,num2) =>{
+    console.log(num1+num2);
+}
+sum(10,10)
