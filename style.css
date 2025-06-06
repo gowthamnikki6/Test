@@ -324,17 +324,23 @@ form button{
 font-style: italic;
 color: blueviolet;
 } */
- .box{
+ /* .box{
   height: 200px;
   width: 200px;
   background-color: pink;
   transition: all 1s ease-outa                                 ;
- }
+ } */
 
- .box:hover{
-  background-color: yellow;
+ /* .box:hover{
+  background-color: yellow; */
   /* width: 400px; */
-  transform: rotate(45deg);
+  /* transform: rotate(45deg);
   margin-top: 50px;
   margin-left: 50px;
- }
+ } */
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
