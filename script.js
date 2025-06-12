@@ -1104,4 +1104,5 @@ let button = document.querySelector('.button');
 // })
 button.addEventListener('click', ()=>{
     heading.classList.toggle("heading")
+    heading.style.cssText = "color:green; background-color:grey; text-transform:uppercase"
 })
