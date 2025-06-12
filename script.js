@@ -1091,6 +1091,14 @@
 // }
 // sum(10,10)
 
-let heading = document.querySelector(".paragraph");
-heading.classList.remove('paragraph');
-heading.classList.add('newParagraph-class')
+// let heading = document.querySelector(".paragraph");
+// heading.classList.remove('paragraph');
+// heading.classList.add('newParagraph-class')
+let heading = document.querySelector('h1')
+let button = document.querySelector('.button');
+button.addEventListener('click', ()=>{
+    button.innerHTML = " This is changed";
+    heading.innerHTML = "I am also changed";
+    heading.style.cssText = "color:red";
+    button.classList.remove('button')
+})
