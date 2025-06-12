@@ -1086,7 +1086,11 @@
 // }
 // console.log(calculateFactorial(5))
 
-let sum = (num1,num2) =>{
-    console.log(num1+num2);
-}
-sum(10,10)
+// let sum = (num1,num2) =>{
+//     console.log(num1+num2);
+// }
+// sum(10,10)
+
+let heading = document.querySelector(".paragraph");
+heading.classList.remove('paragraph');
+heading.classList.add('newParagraph-class')
