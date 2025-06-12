@@ -1096,9 +1096,12 @@
 // heading.classList.add('newParagraph-class')
 let heading = document.querySelector('h1')
 let button = document.querySelector('.button');
+// button.addEventListener('click', ()=>{
+//     button.innerHTML = " This is changed";
+//     heading.innerHTML = "I am also changed";
+//     heading.style.cssText = "color:red";
+//     button.classList.remove('button')
+// })
 button.addEventListener('click', ()=>{
-    button.innerHTML = " This is changed";
-    heading.innerHTML = "I am also changed";
-    heading.style.cssText = "color:red";
-    button.classList.remove('button')
+    heading.classList.toggle("heading")
 })
