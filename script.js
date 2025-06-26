@@ -998,7 +998,7 @@
 //         let rest = str.substring(0,i) + str.substring(i + 1)
 //     permutation(rest, result + str[i])
 //     }
-    
+
 // }
 // permutation(str,'')
 
@@ -1049,7 +1049,6 @@
 // }
 // console.log(generateFib(5))
 
-
 // const isPalindrome = (input) => {
 //     const str = String(input);
 //     for(let i = 0; i < str.length/2; i++){
@@ -1094,15 +1093,71 @@
 // let heading = document.querySelector(".paragraph");
 // heading.classList.remove('paragraph');
 // heading.classList.add('newParagraph-class')
-let heading = document.querySelector('h1')
-let button = document.querySelector('.button');
+// let heading = document.querySelector('h1')
+// let button = document.querySelector('.button');
 // button.addEventListener('click', ()=>{
 //     button.innerHTML = " This is changed";
 //     heading.innerHTML = "I am also changed";
 //     heading.style.cssText = "color:red";
 //     button.classList.remove('button')
 // })
-button.addEventListener('click', ()=>{
-    heading.classList.toggle("heading")
-    heading.style.cssText = "color:green; background-color:grey; text-transform:uppercase"
-})
+// button.addEventListener('click', ()=>{
+//     heading.classList.toggle("heading")
+//     heading.style.cssText = "color:green; background-color:grey; text-transform:uppercase"
+// })
+
+const form = document.querySelector("#form");
+const name = document.querySelector("#name");
+const email = document.querySelector("#email");
+const phoneNumber = document.querySelector("#phonenumber");
+const password = document.querySelector("#password");
+
+form.addEventListener("submit", (e) => {
+  const nameValue = name.value.trim();
+  const emailValue = email.value.trim();
+  const phoneNumberValue = phoneNumber.value.trim();
+  const passwordValue = password.value.trim();
+  if (nameValue == "") {
+    e.preventDefault();
+    alert("Please provide the name!");
+    name.focus();
+    return false;
+  }
+  if (!isNaN(nameValue)) {
+    e.preventDefault();
+    alert("Please provide the valid name!");
+    name.focus();
+    return false;
+  }
+  if (emailValue == "") {
+    e.preventDefault();
+    alert("Please provide the email");
+    email.focus();
+    return false;
+  }
+  if (phoneNumberValue == "") {
+    e.preventDefault();
+    alert("Please provide the Phone Number");
+    email.focus();
+    return false;
+  }
+  if (phoneNumberValue.length !== 10) {
+    e.preventDefault();
+    alert("Please provide valid Phone Number");
+    phoneNumber.focus();
+    return false;
+  }
+  if(passwordValue == ''){
+    e.preventDefault();
+    alert('Please provide the Password');
+    password.focus();
+    return false;
+  }
+  if(passwordValue.length < 5){
+    e.preventDefault();
+    alert('Please provide valid password');
+    password.focus();
+    return false;
+  }
+  alert('Data saved successfully')
+});
