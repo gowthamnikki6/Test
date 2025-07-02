@@ -1162,77 +1162,121 @@
 //   alert('Data saved successfully')
 // });
 
-const form = document.querySelector("#new-task-form");
-const input = document.querySelector("#new-task-input");
-const tasks = document.querySelector(".tasks");
+// const form = document.querySelector("#new-task-form");
+// const input = document.querySelector("#new-task-input");
+// const tasks = document.querySelector(".tasks");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const userData = input.value;
-  console.log(userData);
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const userData = input.value;
+//   console.log(userData);
 
-  if (!userData) {
-    alert("Enter the User Data");
-    return;
-  }
-  const task = document.createElement("div");
-  task.classList.add("task");
+//   if (!userData) {
+//     alert("Enter the User Data");
+//     return;
+//   }
+//   const task = document.createElement("div");
+//   task.classList.add("task");
 
-  const content = document.createElement("div");
-  content.classList.add("content");
+//   const content = document.createElement("div");
+//   content.classList.add("content");
 
-  const task_input = document.createElement("input");
-  task_input.classList.add("text");
-  task_input.classList.add("form-control");
-  task_input.classList.add("mb-2");
-  task_input.value = userData;
-  task_input.setAttribute("readonly", "readonly");
-  task_input.type = "text";
-  task_input.classList.add("my-3");
+//   const task_input = document.createElement("input");
+//   task_input.classList.add("text");
+//   task_input.classList.add("form-control");
+//   task_input.classList.add("mb-2");
+//   task_input.value = userData;
+//   task_input.setAttribute("readonly", "readonly");
+//   task_input.type = "text";
+//   task_input.classList.add("my-3");
 
-  content.appendChild(task_input);
-  task.appendChild(content);
-  tasks.appendChild(task);
+//   content.appendChild(task_input);
+//   task.appendChild(content);
+//   tasks.appendChild(task);
 
-  const actions = document.createElement("div");
-  actions.classList.add("actions");
+//   const actions = document.createElement("div");
+//   actions.classList.add("actions");
 
-  const task_edit = document.createElement("button");
-  task_edit.classList.add("edit");
-  task_edit.classList.add("btn");
-  task_edit.classList.add("btn-warning");
-  task_edit.innerHTML = "Edit";
+//   const task_edit = document.createElement("button");
+//   task_edit.classList.add("edit");
+//   task_edit.classList.add("btn");
+//   task_edit.classList.add("btn-warning");
+//   task_edit.innerHTML = "Edit";
 
-  const task_delete = document.createElement("button");
-  task_delete.classList.add("delete");
-  task_delete.classList.add("btn");
-  task_delete.classList.add("btn-danger");
-  task_delete.classList.add("mx-3");
-  task_delete.innerHTML = "Delete";
+//   const task_delete = document.createElement("button");
+//   task_delete.classList.add("delete");
+//   task_delete.classList.add("btn");
+//   task_delete.classList.add("btn-danger");
+//   task_delete.classList.add("mx-3");
+//   task_delete.innerHTML = "Delete";
 
-  actions.appendChild(task_edit);
-  actions.appendChild(task_delete);
-  content.appendChild(actions);
-  task.appendChild(content);
-  tasks.appendChild(task);
+//   actions.appendChild(task_edit);
+//   actions.appendChild(task_delete);
+//   content.appendChild(actions);
+//   task.appendChild(content);
+//   tasks.appendChild(task);
 
-  input.value = "";
+//   input.value = "";
 
-  // edit user data
-  task_edit.addEventListener("click", () => {
-    if (task_edit.innerHTML == "Edit") {
-      task_input.removeAttribute("readonly", "readonly");
-      task_edit.innerHTML = "Save";
-      task_input.focus();
-    } else {
-      task_input.setAttribute("readonly", "readonly");
-      task_edit.innerHTML = "Edit";
-    }
-  });
+//   // edit user data
+//   task_edit.addEventListener("click", () => {
+//     if (task_edit.innerHTML == "Edit") {
+//       task_input.removeAttribute("readonly", "readonly");
+//       task_edit.innerHTML = "Save";
+//       task_input.focus();
+//     } else {
+//       task_input.setAttribute("readonly", "readonly");
+//       task_edit.innerHTML = "Edit";
+//     }
+//   });
 
-  // delete user data
+//   // delete user data
 
-  task_delete.addEventListener('click',()=>{
-    tasks.removeChild(task);
-  })
-});
+//   task_delete.addEventListener('click',()=>{
+//     tasks.removeChild(task);
+//   })
+// });
+
+const heading = document.querySelector('.heading');
+const image = document.querySelector('.image');
+const btn1 = document.querySelector('.btn1');
+const btn2 = document.querySelector('.btn2');
+const btn3 = document.querySelector('.btn3');
+const btn4 = document.querySelector('.btn4');
+const clear = document.querySelector('.clear');
+
+btn1.addEventListener('click',()=>{
+  image.setAttribute('src','./images/image1.jpg');
+  image.setAttribute('alt','image1')
+  heading.innerHTML = 'Image 1'
+
+})
+
+btn2.addEventListener('click',()=>{
+  image.setAttribute('src','./images/image2.jpg');
+  image.setAttribute('alt','image2')
+  heading.innerHTML = 'Image 2'
+
+})
+
+btn3.addEventListener('click',()=>{
+  image.setAttribute('src','./images/image3.jpg');
+  image.setAttribute('alt','image3')
+  heading.innerHTML = 'Image 3'
+
+})
+
+btn4.addEventListener('click',()=>{
+  image.setAttribute('src','./images/image4.jpg');
+  image.setAttribute('alt','image4')
+  heading.innerHTML = 'Image 4'
+
+})
+
+clear.addEventListener('click',()=>{
+  image.setAttribute('src','');
+  image.setAttribute('alt','')
+  heading.innerHTML = 'Please select an image to display';
+
+})
+
