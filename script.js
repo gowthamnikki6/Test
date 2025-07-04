@@ -1237,46 +1237,53 @@
 //   })
 // });
 
-const heading = document.querySelector('.heading');
-const image = document.querySelector('.image');
-const btn1 = document.querySelector('.btn1');
-const btn2 = document.querySelector('.btn2');
-const btn3 = document.querySelector('.btn3');
-const btn4 = document.querySelector('.btn4');
-const clear = document.querySelector('.clear');
+// const heading = document.querySelector('.heading');
+// const image = document.querySelector('.image');
+// const btn1 = document.querySelector('.btn1');
+// const btn2 = document.querySelector('.btn2');
+// const btn3 = document.querySelector('.btn3');
+// const btn4 = document.querySelector('.btn4');
+// const clear = document.querySelector('.clear');
 
-btn1.addEventListener('click',()=>{
-  image.setAttribute('src','./images/image1.jpg');
-  image.setAttribute('alt','image1')
-  heading.innerHTML = 'Image 1'
+// btn1.addEventListener('click',()=>{
+//   image.setAttribute('src','./images/image1.jpg');
+//   image.setAttribute('alt','image1')
+//   heading.innerHTML = 'Image 1'
 
+// })
+
+// btn2.addEventListener('click',()=>{
+//   image.setAttribute('src','./images/image2.jpg');
+//   image.setAttribute('alt','image2')
+//   heading.innerHTML = 'Image 2'
+
+// })
+
+// btn3.addEventListener('click',()=>{
+//   image.setAttribute('src','./images/image3.jpg');
+//   image.setAttribute('alt','image3')
+//   heading.innerHTML = 'Image 3'
+
+// })
+
+// btn4.addEventListener('click',()=>{
+//   image.setAttribute('src','./images/image4.jpg');
+//   image.setAttribute('alt','image4')
+//   heading.innerHTML = 'Image 4'
+
+// })
+
+// clear.addEventListener('click',()=>{
+//   image.setAttribute('src','');
+//   image.setAttribute('alt','')
+//   heading.innerHTML = 'Please select an image to display';
+
+// })
+
+const faqs = document.querySelectorAll('.faq');
+
+faqs.forEach((faq)=>{
+  faq.addEventListener('click',()=>{
+    faq.classList.toggle('active');
+  })
 })
-
-btn2.addEventListener('click',()=>{
-  image.setAttribute('src','./images/image2.jpg');
-  image.setAttribute('alt','image2')
-  heading.innerHTML = 'Image 2'
-
-})
-
-btn3.addEventListener('click',()=>{
-  image.setAttribute('src','./images/image3.jpg');
-  image.setAttribute('alt','image3')
-  heading.innerHTML = 'Image 3'
-
-})
-
-btn4.addEventListener('click',()=>{
-  image.setAttribute('src','./images/image4.jpg');
-  image.setAttribute('alt','image4')
-  heading.innerHTML = 'Image 4'
-
-})
-
-clear.addEventListener('click',()=>{
-  image.setAttribute('src','');
-  image.setAttribute('alt','')
-  heading.innerHTML = 'Please select an image to display';
-
-})
-

@@ -314,7 +314,7 @@ form button{
 .box5{
   background-color: yellow;
 } */
- /* p{
+/* p{
   color: brown;
  } */
 /* p:first-line {
@@ -324,32 +324,97 @@ form button{
 font-style: italic;
 color: blueviolet;
 } */
- /* .box{
+/* .box{
   height: 200px;
   width: 200px;
   background-color: pink;
   transition: all 1s ease-outa                                 ;
  } */
 
- /* .box:hover{
+/* .box:hover{
   background-color: yellow; */
-  /* width: 400px; */
-  /* transform: rotate(45deg);
+/* width: 400px; */
+/* transform: rotate(45deg);
   margin-top: 50px;
   margin-left: 50px;
  } */
-  /* *{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
   } */
 
-  /* .heading{
+/* .heading{
     color: red;
     font-size: 70px;
   } */
 
-  .input{
+/* .input{
     width: 250px
-  }
+  } */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 70px 100px;
+  gap: 30px;
+}
+
+.container .faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.container .faq .question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: all 0.5s;
+}
+.container .faq.faq.active .question img{
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
+.container .faq .answer{
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.container .faq.active .answer{
+  max-height: 500px;
+  transition: 1s;
+}
+.container h1 {
+  margin-bottom: 40px;
+}
+
+.container .faq .question img {
+  height: 30px;
+}
