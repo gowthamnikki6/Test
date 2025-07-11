@@ -328,7 +328,7 @@ color: blueviolet;
   height: 200px;
   width: 200px;
   background-color: pink;
-  transition: all 1s ease-outa                                 ;
+  transition: all 1s ease-out                                 ;
  } */
 
 /* .box:hover{
@@ -354,7 +354,7 @@ color: blueviolet;
     width: 250px
   } */
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -417,4 +417,4 @@ body {
 
 .container .faq .question img {
   height: 30px;
-}
+} */
