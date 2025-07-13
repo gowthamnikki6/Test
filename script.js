@@ -1288,28 +1288,28 @@
 //   })
 // })
 
-const button = document.querySelector(".btn");
-const setup = document.querySelector(".setup");
-const setupText = setup.children[0];
-const punchline = document.querySelector(".punchline");
-const punchlineText = punchline.children[0];
+// const button = document.querySelector(".btn");
+// const setup = document.querySelector(".setup");
+// const setupText = setup.children[0];
+// const punchline = document.querySelector(".punchline");
+// const punchlineText = punchline.children[0];
 
-button.addEventListener("click", async () => {
-  try {
-    const response = await fetch(
-      "https://official-joke-api.appspot.com/random_joke"
-    );
+// button.addEventListener("click", async () => {
+//   try {
+//     const response = await fetch(
+//       "https://official-joke-api.appspot.com/random_joke"
+//     );
 
-    const data = await response.json();
-    setupText.innerHTML = data.setup;
-    punchlineText.innerHTML = "";
-    setTimeout(() => {
-      punchlineText.innerHTML = data.punchline;
-    }, 3000);
-  } catch (err) {
-    console.log(err);
-  }
-});
+//     const data = await response.json();
+//     setupText.innerHTML = data.setup;
+//     punchlineText.innerHTML = "";
+//     setTimeout(() => {
+//       punchlineText.innerHTML = data.punchline;
+//     }, 3000);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// });
 
 // button.addEventListener("click", () => {
 //   fetch("https://official-joke-api.appspot.com/random_joke")
@@ -1329,3 +1329,4 @@ button.addEventListener("click", async () => {
 //       console.log(err);
 //     });
 // });
+
