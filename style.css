@@ -441,9 +441,9 @@ body {
   gap: 60px;
 }
 
-.navbar .menu .nav-links a{
-color: white;
-font-size: 16px;
+.navbar .menu .nav-links a {
+  color: white;
+  font-size: 16px;
 }
 
 .navbar .logo {
@@ -493,17 +493,73 @@ li {
   list-style: none;
 }
 
-@media(max-width:700px){
-  .navbar .menu{
+@media (max-width: 700px) {
+  .navbar .menu {
     display: none;
   }
-  .navbar .hamburger{
+  .navbar .hamburger {
     display: block;
   }
-  .navbar .hamburger div{
+  .navbar .hamburger div {
     background-color: #ffff;
     height: 5px;
     width: 30px;
     margin-bottom: 5px;
+  }
+}
+
+.hero {
+  background-image: url("./images/lsnew.png");
+  height: 85vh;
+  background-size: cover;
+  background-position: center;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  padding-right: 100px;
+}
+
+.hero .content {
+  width: 600px;
+  height: 260px;
+  background-color: rgba(225, 225, 225, 0.15);
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  display: flex;
+  padding-left: 30px;
+}
+
+.hero .content h3 {
+  color: #a19b99;
+  font-size: 30px;
+}
+
+.hero .content h1 {
+  color: white;
+  font-size: 60px;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    background-position: right;
+    justify-content: center;
+    padding-right: 0;
+    padding: 0px 20px;
+  }
+  .hero .content {
+    width: 400px;
+    height: 219px;
+    padding: 0 20px;
+    gap: 15px;
+  }
+  .hero .content h3 {
+    font-size: 20px;
+  }
+  
+  .hero .content h1 {
+    font-size: 40px;
+    line-height: 40px;
   }
 }
