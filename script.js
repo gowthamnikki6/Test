@@ -1330,3 +1330,14 @@
 //     });
 // });
 
+function navSlide(){
+    const nav = document.querySelector('.navbar');
+    const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.querySelector('.hamburger');
+
+    hamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('nav-active');
+        hamburger.classList.toggle('toggle');
+    })
+}
+navSlide();
