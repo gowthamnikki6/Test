@@ -1330,14 +1330,302 @@
 //     });
 // });
 
-function navSlide(){
-    const nav = document.querySelector('.navbar');
-    const navLinks = document.querySelector('.nav-links');
-    const hamburger = document.querySelector('.hamburger');
+// function navSlide(){
+//     const nav = document.querySelector('.navbar');
+//     const navLinks = document.querySelector('.nav-links');
+//     const hamburger = document.querySelector('.hamburger');
 
-    hamburger.addEventListener('click',()=>{
-        navLinks.classList.toggle('nav-active');
-        hamburger.classList.toggle('toggle');
-    })
+//     hamburger.addEventListener('click',()=>{
+//         navLinks.classList.toggle('nav-active');
+//         hamburger.classList.toggle('toggle');
+//     })
+// }
+// navSlide();
+
+// add(8,8);
+
+// function add(a,b){
+//     console.log(a+b);
+// }
+
+// let add =(a,b)=>{
+//     console.log(a+b);
+// }
+// Console.log ( data)
+// let data ='” hello world”'
+
+// function greet(morning) {
+//   return morning();
+// }
+
+// greet(()=>{
+//     console.log('good morning')
+// })
+
+// function greet(){
+//     return function(){
+//         console.log("Good Morning");
+//     }
+// }
+
+// let function1 = greet();
+// function1()
+
+// let greet = ()=>{
+//     console.log('good morning')
+// }
+
+// setTimeout(greet,3000)
+
+// setInterval(()=>{
+//     console.log('I am a function');
+// },3000);
+// console.log('I got printed first')
+// function startProgress() {
+//     let progress = 0;
+//     const bar = document.getElementById("progressBar");
+
+//     const interval = setInterval(() => {
+//       if (progress >= 100) {
+//         clearInterval(interval);
+//       } else {
+//         progress += 1;
+//         bar.style.width = progress + "%";
+//       }
+//     }, 100); // updates every 100ms
+//   }
+
+// Map
+// let numbers = [25,26,27,28,29];
+
+// let sum = numbers.map((number)=>{
+//     return number + 10;
+// })
+// console.log(numbers, sum)
+
+// filter
+
+// let numbers = [2,3,4,5,6,7,8,9];
+
+// let filtersNum = numbers.filter((number)=>{
+//     return number >= 5;
+// })
+// console.log(numbers,filtersNum);
+
+// reduce ---> single output value
+
+// let numbers = [2,4,8,5,9,3,4,7];
+
+// let singleOutput = numbers.reduce((total,number)=>{
+// return total += number
+// })
+
+// console.log(numbers,singleOutput);
+
+// sorting ---> ascending or descending order
+
+// let numbers = [ 10,4,8,3,29,5,12,3,0];
+
+// let sortNumbers = numbers.sort((a,b)=>{
+// return b-a;
+// })
+
+// console.log(numbers, sortNumbers);
+
+// let marks = [ 45,39,86,90,75,29];
+
+// let graceMarks = marks.filter((mark)=>{
+// return mark < 40;
+// }).map((mark)=>{
+// return mark + 10
+// })
+// console.log(graceMarks)
+// const books = [
+//   { title: "Atomic Habits", author: "James Clear", rating: 4.8 },
+//   { title: "The Alchemist", author: "Paulo Coelho", rating: 4.3 },
+//   { title: "Deep Work", author: "Cal Newport", rating: 3.9 },
+//   { title: "Ikigai", author: "Héctor García", rating: 4.2 },
+//   { title: "Thinking, Fast and Slow", author: "Daniel Kahneman", rating: 4.1 },
+// ];
+
+// function filterAndSortBooks(bookArray) {
+//   const filteredBooks = bookArray.filter(book => book.rating >= 4.5);
+
+//   filteredBooks.sort((a,b)=>{
+//     const titleA = a.title.toLowerCase();
+//     const titleB = b.title.toLowerCase();
+//     if(titleA < titleB)return -1;
+//     if(titleA > titleB) return 1;
+//     return 0;
+
+//   })
+//   return filteredBooks
+// }
+// const result = filterAndSortBooks(books);
+// console.log(result)
+// const sortedByTitle = [...books].sort(
+//   (a, b) => {
+//     const titleA = a.title.toLowerCase();
+//     const titleB = b.title.toLowerCase();
+//     if (titleA < titleB) return -1;
+//     if (titleA > titleB) return 1;
+//     return 0;
+//   }
+//   //   a.title.localeCompare(b.title)
+//   // return b-a;
+// );
+// console.log(sortedByTitle);
+
+// const shoppingCart = [
+//     { id: 1, name: 'Laptop', price: 800, quantity: 2 },
+//     { id: 2, name: 'Smartphone', price: 500, quantity: 1 },
+//     { id: 3, name: 'Tablet', price: 300, quantity: 3 },
+//     { id: 4, name: 'Headphones', price: 50, quantity: 2 }
+// ];
+
+// const totalPerPRoduct = shoppingCart.map(item => ({
+//     ...item,
+//     totalCost : item.price * item.quantity
+// }))
+
+// const expensiveItems= totalPerPRoduct.filter(item => item.totalCost > 1000)
+// // console.log(expensiveItem)
+// const totalCartCost = totalPerPRoduct.reduce((sum,item) => sum + item.totalCost,0)
+
+// // console.log(totalCartCost)
+
+// const sortByQuantity = shoppingCart.sort((a,b)=> b.quantity - a.quantity)
+// console.log(sortByQuantity)
+
+// let names = ['steve','job','kevin','peter'];
+
+// let element1 = names[0];
+// let element2 = names[3];
+
+// console.log(element1,element2)
+
+// let user = { name: "Gowtham", age: 25, gender: 'male' };
+
+// let {name,age,gender} = user;
+// console.log(name,age,gender)
+
+// const person = {
+//     name: "joe",
+//     age: 36,
+//     address: "123 Main street"
+// }
+// const {name,age} = person;
+// const personInfo = {name,age};
+// console.log(personInfo)
+
+// const student = {
+//     name: "Anil",
+//     age: 36,
+//     grade: "11th"
+// }
+
+// function printStudentInfo(student){
+// const { name,age,grade} = student;
+// console.log('name :'+ name);
+// console.log('age :' + age);
+// console.log('grade :' + grade)
+// }
+// printStudentInfo(student);
+
+// rest operator
+// let add = (...input)=>{
+//     let sum = 0;
+//     for(let i of input){
+//         sum += i;
+//     }
+//     console.log(sum);
+// }
+// add(12,32,35,12,55);
+
+// function combineArrays(array1, array2){
+//     const combineArray = [];
+//     for(let i=0; i<array1.length; i++){
+//         combineArray.push(array1[i]);
+//     }
+//     for(let j=0; j<array2.length; j++){
+//         combineArray.push(array2[j]);
+//     }
+//     console.log(combineArray);
+//     return combineArray;
+// }
+// combineArrays([2,45,6,3,5],[566,8,9,5,6]);
+
+//  let closure;
+// {
+//     let value = "XYZ"
+//     closure=()=>{
+// console.log(value)
+//     }
+// }
+// closure()
+// console.log(value)
+// let closure;
+// {
+//   let myObj = {
+//     name: "XYZ",
+//     age : 32
+//   };
+//   closure = ()=>{
+//     return myObj;
+//   }
+// }
+// let value = closure()
+// console.log(value);
+
+//  function greeting(){
+//     let message = "hi";
+//     function sayHi(){
+//         console.log("message")
+//     }
+//     return sayHi;
+//  }
+//  let function2 = greeting();
+//  function2()
+
+// function createCounter(){
+//     let count = 0;
+//     return {
+//         increment : function(){
+//             count++;
+//         },
+//         getCount : function(){
+//             return count;
+//         }
+//     }
+// }
+
+// const counter = createCounter();
+// counter.increment();
+// counter.increment();
+// counter.increment();
+
+let step1 = (callback)=>{
+console.log('I am step 1');
+callback()
 }
-navSlide();
+
+let step2 = (callback)=>{
+    console.log('I am step 2');
+    callback()
+}
+
+let step3 = (callback)=>{
+    console.log("I am step 3");
+    callback()
+}
+
+let step4 = (callback)=>{
+    console.log("I am step 4");
+}
+step1(()=>{
+    step2(()=>{
+        step3(()=>{
+            step4()
+        })
+    })
+})
