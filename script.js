@@ -1636,31 +1636,47 @@
 //     },2000)
 // }
 // logMessageAfterDelay()
-let stepOne = () => {
+// let stepOne = () => {
+//   return new Promise((resolve, reject) => {
+//     if (true) {
+//       console.log("I am step 1");
+//       resolve();
+//     } else {
+//       reject();
+//     }
+//   });
+// };
+
+// let stepTwo = () => {
+//   console.log("I am step two");
+// };
+
+// let stepThree = () => {
+//     console.log("I am stepThree");
+// }
+// stepOne()
+//   .then(() => {
+//     stepTwo()
+//   })
+//   .then(()=>{
+//     stepThree()
+//   })
+//   .catch(() => {
+//     console.log("error");
+//   });
+
+function orderFoodDelivery(foodItem) {
   return new Promise((resolve, reject) => {
-    if (true) {
-      console.log("I am step 1");
-      resolve();
-    } else {
-      reject();
-    }
+    console.log(`Placing order for : ${foodItem}`);
+    setTimeout(()=>{
+        resolve(`${foodItem} order confirmed! Your food is on the way`)
+      },2000) 
   });
-};
-
-let stepTwo = () => {
-  console.log("I am step two");
-};
-
-let stepThree = () => {
-    console.log("I am stepThree");
+ 
 }
-stepOne()
-  .then(() => {
-    stepTwo()
-  })
-  .then(()=>{
-    stepThree()
-  })
-  .catch(() => {
-    console.log("error");
-  });
+
+orderFoodDelivery("Chicken Biryani").then(message => {
+    console.log(message);
+}).catch(error =>{
+console("Something went wrong with your order:", error)
+})
