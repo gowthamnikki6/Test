@@ -1665,18 +1665,50 @@
 //     console.log("error");
 //   });
 
-function orderFoodDelivery(foodItem) {
-  return new Promise((resolve, reject) => {
-    console.log(`Placing order for : ${foodItem}`);
-    setTimeout(()=>{
-        resolve(`${foodItem} order confirmed! Your food is on the way`)
-      },2000) 
-  });
- 
-}
+// function orderFoodDelivery(foodItem) {
+//   return new Promise((resolve, reject) => {
+//     console.log(`Placing order for : ${foodItem}`);
+//     setTimeout(()=>{
+//         resolve(`${foodItem} order confirmed! Your food is on the way`)
+//       },2000)
+//   });
 
-orderFoodDelivery("Chicken Biryani").then(message => {
-    console.log(message);
-}).catch(error =>{
-console("Something went wrong with your order:", error)
-})
+// }
+
+// orderFoodDelivery("Chicken Biryani").then(message => {
+//     console.log(message);
+// }).catch(error =>{
+// console("Something went wrong with your order:", error)
+// })
+
+let step1 = () => {
+  return new Promise((resolve, reject) => {
+    if (true) {
+      console.log("step 1 done");
+      resolve();
+    } else {
+      reject("error in step1");
+    }
+  });
+};
+
+let step2 = () => {
+    return new Promise((resolve, reject)=>{
+        if(true){
+            console.log("step2 done");
+            resolve()
+        }else {
+            reject("error in step2")
+        }
+    })
+}
+async function working(){
+    try{
+       await step1();
+       await step2(); 
+    }
+    catch(err){
+        console.log(err)
+    }
+}
+working()
