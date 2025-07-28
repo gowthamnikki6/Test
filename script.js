@@ -1681,34 +1681,46 @@
 // console("Something went wrong with your order:", error)
 // })
 
-let step1 = () => {
-  return new Promise((resolve, reject) => {
-    if (true) {
-      console.log("step 1 done");
-      resolve();
-    } else {
-      reject("error in step1");
-    }
-  });
-};
+// let step1 = () => {
+//   return new Promise((resolve, reject) => {
+//     if (true) {
+//       console.log("step 1 done");
+//       resolve();
+//     } else {
+//       reject("error in step1");
+//     }
+//   });
+// };
 
-let step2 = () => {
-    return new Promise((resolve, reject)=>{
-        if(true){
-            console.log("step2 done");
-            resolve()
-        }else {
-            reject("error in step2")
-        }
-    })
-}
-async function working(){
-    try{
-       await step1();
-       await step2(); 
+// let step2 = () => {
+//     return new Promise((resolve, reject)=>{
+//         if(true){
+//             console.log("step2 done");
+//             resolve()
+//         }else {
+//             reject("error in step2")
+//         }
+//     })
+// }
+// async function working(){
+//     try{
+//        await step1();
+//        await step2(); 
+//     }
+//     catch(err){
+//         console.log(err)
+//     }
+// }
+// working()
+// fetch data from api
+let url = "https://jsonplaceholder.typicode.com/users";
+
+fetch(url)
+.then((response)=>{
+    return response.json();
+})
+.then((data)=>{
+    for(let item in data){
+        console.log(data[item].name);
     }
-    catch(err){
-        console.log(err)
-    }
-}
-working()
+})
