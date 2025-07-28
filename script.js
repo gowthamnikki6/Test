@@ -1713,14 +1713,38 @@
 // }
 // working()
 // fetch data from api
+// let url = "https://jsonplaceholder.typicode.com/users";
+
+// fetch(url)
+// .then((response)=>{
+//     return response.json();
+// })
+// .then((data)=>{
+//     for(let item in data){
+//         console.log(data[item].name);
+//     }
+// })
+
+// Post method
+
 let url = "https://jsonplaceholder.typicode.com/users";
 
-fetch(url)
+fetch(url,{
+    method : "Post",
+    body : JSON.stringify({
+        name : "XYZ",
+        email : "xyz@gmail.com"
+    }),
+    headers : {
+        "content-type" : "application/json"
+    }
+})
 .then((response)=>{
     return response.json();
 })
 .then((data)=>{
-    for(let item in data){
-        console.log(data[item].name);
-    }
+    // for(let item in data){
+    //     console.log(data[item].name);
+    // }
+    console.log(data)
 })
