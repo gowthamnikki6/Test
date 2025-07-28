@@ -1604,28 +1604,63 @@
 // counter.increment();
 // counter.increment();
 
-let step1 = (callback)=>{
-console.log('I am step 1');
-callback()
-}
+// let step1 = (callback)=>{
+// console.log('I am step 1');
+// callback()
+// }
 
-let step2 = (callback)=>{
-    console.log('I am step 2');
-    callback()
-}
+// let step2 = (callback)=>{
+//     console.log('I am step 2');
+//     callback()
+// }
 
-let step3 = (callback)=>{
-    console.log("I am step 3");
-    callback()
-}
+// let step3 = (callback)=>{
+//     console.log("I am step 3");
+//     callback()
+// }
 
-let step4 = (callback)=>{
-    console.log("I am step 4");
+// let step4 = (callback)=>{
+//     console.log("I am step 4");
+// }
+// step1(()=>{
+//     step2(()=>{
+//         step3(()=>{
+//             step4()
+//         })
+//     })
+// })
+
+// function logMessageAfterDelay(){
+//     setTimeout(()=>{
+//         console.log("message after 2 seconds")
+//     },2000)
+// }
+// logMessageAfterDelay()
+let stepOne = () => {
+  return new Promise((resolve, reject) => {
+    if (true) {
+      console.log("I am step 1");
+      resolve();
+    } else {
+      reject();
+    }
+  });
+};
+
+let stepTwo = () => {
+  console.log("I am step two");
+};
+
+let stepThree = () => {
+    console.log("I am stepThree");
 }
-step1(()=>{
-    step2(()=>{
-        step3(()=>{
-            step4()
-        })
-    })
-})
+stepOne()
+  .then(() => {
+    stepTwo()
+  })
+  .then(()=>{
+    stepThree()
+  })
+  .catch(() => {
+    console.log("error");
+  });
