@@ -1727,24 +1727,35 @@
 
 // Post method
 
-let url = "https://jsonplaceholder.typicode.com/users";
+// let url = "https://jsonplaceholder.typicode.com/users";
 
-fetch(url,{
-    method : "Post",
-    body : JSON.stringify({
-        name : "XYZ",
-        email : "xyz@gmail.com"
-    }),
-    headers : {
-        "content-type" : "application/json"
+// fetch(url,{
+//     method : "Post",
+//     body : JSON.stringify({
+//         name : "XYZ",
+//         email : "xyz@gmail.com"
+//     }),
+//     headers : {
+//         "content-type" : "application/json"
+//     }
+// })
+// .then((response)=>{
+//     return response.json();
+// })
+// .then((data)=>{
+//     // for(let item in data){
+//     //     console.log(data[item].name);
+//     // }
+//     console.log(data)
+// })
+
+const div = document.querySelector('div');
+
+div.addEventListener('click',(event)=>{
+    if(event.target.tagName==='BUTTON'){
+        console.log(event.target.innerText);
     }
-})
-.then((response)=>{
-    return response.json();
-})
-.then((data)=>{
-    // for(let item in data){
-    //     console.log(data[item].name);
-    // }
-    console.log(data)
+    if(event.target.tagName==='P'){
+        console.log(event.target.innerText);
+    }
 })
